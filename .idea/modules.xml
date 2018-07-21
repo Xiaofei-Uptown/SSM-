@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ssm.iml" filepath="$PROJECT_DIR$/ssm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../IDEA/ssm-crud/ssm-crud.iml" filepath="$PROJECT_DIR$/../IDEA/ssm-crud/ssm-crud.iml" />
     </modules>
   </component>
 </project>

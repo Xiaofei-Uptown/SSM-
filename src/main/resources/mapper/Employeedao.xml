@@ -57,4 +57,9 @@
         email=#{email}
         where emp_id = #{emp_id}
     </update>
+    <select id="findDept" resultType="com.entity.DeptNum">
+        SELECT t.dept_name,COUNT(tbl_emp.dId) as count
+        FROM tbl_emp RIGHT JOIN tnl_dept t on t.dept_id = tbl_emp.dId
+        GROUP BY t.dept_name
+    </select>
 </mapper>

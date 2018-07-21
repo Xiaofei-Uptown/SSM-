@@ -144,6 +144,7 @@
         <div class="col-md-4 col-md-offset-8">
             <button class="btn btn-primary" id="emp_add_model">新增</button>
             <button class="btn btn-danger">删除</button>
+            <button class="btn btn-info" id = "have_a_look">查看员工分布</button>
         </div>
     </div>
     <%--表格--%>
@@ -360,7 +361,6 @@
     $("#emp_save_btn").click(function () {
         //1.模态框中填写的表单数据提交给服务器进行保存
         //1.校验数据
-
         //2.发送ajax请求保存员工
         $("#empAddModal form").serialize()
         $.ajax({
@@ -374,6 +374,15 @@
             }
         });
     });
+    $("#have_a_look").click(function () {
+        $.ajax({
+            url:"${APP_PATH}",
+            type:"get",
+            success:function () {
+                window.location.href="${APP_PATH}/echarts";
+            }
+        })
+    })
     var xxx;
     var yyy;
     $(document).on("click",".edit_btn",function(){

@@ -1,6 +1,7 @@
 package com.Dao;
 
 import com.entity.DeptAndEmp;
+import com.entity.DeptNum;
 import com.entity.Employee;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public interface Employeedao {
 
    // public Employee selsectEmpandDeptByID(Employee entity);
 
+    public List<DeptNum> findDept();
 
 
     public List<DeptAndEmp> selectEmpandDept();

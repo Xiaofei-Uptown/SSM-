@@ -2,6 +2,7 @@ package com.web;
 
 import com.Service.EmployeeService;
 import com.entity.DeptAndEmp;
+import com.entity.DeptNum;
 import com.entity.Employee;
 import com.entity.Msg;
 import com.github.pagehelper.PageHelper;
@@ -25,7 +26,6 @@ public class EmployeeController {
         return Msg.success();
     }
     @RequestMapping(value="/emp/{id}",method = RequestMethod.DELETE)
-    @ResponseBody
     public  Msg deleteEmpById(@PathVariable("id") Integer id){
         employeeService.deleteEmp(id);
         return null;
@@ -46,6 +46,20 @@ public class EmployeeController {
 //        System.out.println("将要更新的员工数据："+employee);
         employeeService.updateEmp(employee);
         return Msg.success();
+    }
+
+    @RequestMapping(value="/echarts")
+    public String getpeople(){
+        //List<DeptNum> list = employeeService.selectPeople();
+
+        return "Echarts";
+    }
+
+    @RequestMapping(value="/look")
+    @ResponseBody
+    public Msg lookdept(){
+        List<DeptNum> list = employeeService.selectPeople();
+        return Msg.success().add("look",list);
     }
 
     @RequestMapping("/emps")

@@ -25,4 +25,5 @@ public class DepartmentController {
         return Msg.success().add("depts",list);
     }
 
+
 }

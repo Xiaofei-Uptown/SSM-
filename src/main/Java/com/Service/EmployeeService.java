@@ -2,6 +2,7 @@ package com.Service;
 
 import com.Dao.Employeedao;
 import com.entity.DeptAndEmp;
+import com.entity.DeptNum;
 import com.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,11 @@ public class EmployeeService {
 
         employeedao.update(employee);
     }
+    public List<DeptNum> selectPeople(){
+
+        return employeedao.findDept();
+    }
+
 
 
 }
