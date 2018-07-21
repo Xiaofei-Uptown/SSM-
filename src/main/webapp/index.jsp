@@ -141,10 +141,11 @@
     </div>
     <%--按钮--%>
     <div class="row">
-        <div class="col-md-4 col-md-offset-8">
+        <div class="col-md-4 col-md-offset-6">
             <button class="btn btn-primary" id="emp_add_model">新增</button>
             <button class="btn btn-danger">删除</button>
-            <button class="btn btn-info" id = "have_a_look">查看员工分布</button>
+            <button class="btn btn-info" id = "have_a_look">员工柱状分布</button>
+            <button class="btn btn-info" id = "have_an_look">员工饼状分布</button>
         </div>
     </div>
     <%--表格--%>
@@ -374,6 +375,49 @@
             }
         });
     });
+    $("#have_an_look").click(function () {
+        $.ajax({
+            success:function () {
+                window.location.href="${APP_PATH}/echartss"
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+    })
+
+
+
     $("#have_a_look").click(function () {
         $.ajax({
             url:"${APP_PATH}",

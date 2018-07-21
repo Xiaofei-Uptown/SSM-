@@ -18,10 +18,15 @@
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="main" style="width: 600px;height:400px;"></div>
+<div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-primary" id = "backHome">返回首页</button>
+</div>
+
 <!-- 引入 echarts.js -->
 <script type="text/javascript" src="${APP_PATH }/static/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../../static/Echarts/echarts.common.min.js"></script>
 <script src="../../static/Echarts/echarts.common.min.js"></script>
+<link href="${APP_PATH }/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
@@ -69,7 +74,6 @@
                     {
                         data:datalist,
                         type:'bar'
-
                     }
                 ]
             });
@@ -78,6 +82,16 @@
             console.log(error)
         }
     });
+    $("#backHome").click(function () {
+       $.ajax({
+           url:"${APP_PATH}",
+           success:function () {
+               window.location.href="${APP_PATH}/index.jsp";
+           }
+
+       })
+    })
 </script>
+
 </body>
 </html>

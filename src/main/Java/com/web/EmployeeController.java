@@ -19,6 +19,12 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
+    @RequestMapping(value = "/index")
+    public String back(){
+
+        return "index";
+    }
+
     @RequestMapping(value = "/emp",method = RequestMethod.POST)
     @ResponseBody
     public Msg saveEmp(Employee employee){
@@ -53,6 +59,13 @@ public class EmployeeController {
         //List<DeptNum> list = employeeService.selectPeople();
 
         return "Echarts";
+    }
+
+    @RequestMapping(value="/echartss")
+    public String getpeoples(){
+        //List<DeptNum> list = employeeService.selectPeople();
+
+        return "Echartss";
     }
 
     @RequestMapping(value="/look")
