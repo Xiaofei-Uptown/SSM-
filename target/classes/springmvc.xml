@@ -27,4 +27,12 @@
 	<!-- 能支持Spring MVC 的一些更高级的设置，如JSR303校验，快捷的ajax,映射动态请求 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 
+	<!--<mvc:interceptors>-->
+		<!--&lt;!&ndash; 多个拦截器，顺序执行 &ndash;&gt;-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<bean class="com.web.logininterceptor"></bean>-->
+		<!--</mvc:interceptor>-->
+	<!--</mvc:interceptors>-->
+
 </beans>

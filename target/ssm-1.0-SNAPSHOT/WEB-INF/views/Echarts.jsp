@@ -86,7 +86,7 @@
        $.ajax({
            url:"${APP_PATH}",
            success:function () {
-               window.location.href="${APP_PATH}/index.jsp";
+               window.location.href="index";
            }
 
        })

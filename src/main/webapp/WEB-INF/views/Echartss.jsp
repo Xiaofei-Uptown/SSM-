@@ -74,6 +74,7 @@
     $.ajax({
         url : "${APP_PATH}/look",
         success:function (result) {
+            //遍历json数据
             $.each(result.extend.look, function (index, item) {
                 names.push(item.dept_name);    //挨个取出类别并填入类别数组
                 brower.push({
@@ -95,7 +96,7 @@
         $.ajax({
             url:"${APP_PATH}",
             success:function () {
-                window.location.href="${APP_PATH}/index.jsp";
+                window.location.href="index";
             }
 
         })
