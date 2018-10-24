@@ -82,6 +82,7 @@
                     value: item.count
                 });
             });
+            console.log(result.extend.look);
             myChart.setOption({        //加载数据图表
                 legend: {
                     data: names
